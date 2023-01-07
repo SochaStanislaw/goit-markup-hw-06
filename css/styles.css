@@ -900,10 +900,8 @@ address.footer-address-box {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 /* social icons */
-.footer-social-icons {
-    /* margin-right: 78px; */
-}
 .footer-social-icons p  {
     display: flex;
     flex-direction: column;
