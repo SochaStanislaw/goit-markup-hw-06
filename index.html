@@ -39,10 +39,15 @@
           Zostaw swoje dane w formularzu poniżej
         </h3>
         <div class="modal-forms-container">
-          <div class="modal-forms">
-            <label for="modal-form-firstname">Imię</label>
-            <form name="modal-form-firstname" autocomplete="on">
-              <input id="modal-form-firstname" type="text" name="name" />
+          <form name="modal-forms" autocomplete="on">
+            <div class="modal-forms-display">
+              <label for="modal-form-firstname">Imię</label>
+              <input
+                id="modal-form-firstname"
+                type="text"
+                name="name"
+                required
+              />
               <svg
                 class="modal-forms-icon person-form-icon"
                 width="18px"
@@ -52,15 +57,14 @@
                   href="./images/SVG/modal-form-icons.svg#icon-person-black-18dp-1"
                 ></use>
               </svg>
-            </form>
-          </div>
-          <div class="modal-forms">
-            <label for="modal-form-phone-number">Telefon</label>
-            <form name="modal-form-phone-number" autocomplete="on">
+            </div>
+            <div class="modal-forms-display">
+              <label for="modal-form-phone-number">Telefon</label>
               <input
                 id="modal-form-phone-number"
                 type="tel"
                 name="modal-form-phone-number"
+                required
               />
               <svg
                 class="modal-forms-icon phone-form-icon"
@@ -71,15 +75,14 @@
                   href="./images/SVG/modal-form-icons.svg#icon-phone-black-18dp-1"
                 ></use>
               </svg>
-            </form>
-          </div>
-          <div class="modal-forms">
-            <label for="modal-form-email">Email</label>
-            <form name="modal-form-email" autocomplete="on">
+            </div>
+            <div class="modal-forms-display">
+              <label for="modal-form-email">Email</label>
               <input
                 id="modal-form-email"
                 type="email"
                 name="modal-form-email"
+                required
               />
               <svg
                 class="modal-forms-icon email-form-icon"
@@ -90,45 +93,46 @@
                   href="./images/SVG/modal-form-icons.svg#icon-email-black-18dp-1"
                 ></use>
               </svg>
-            </form>
-          </div>
-          <div class="modal-forms">
-            <label for="modal-form-comment">Komentarz</label>
-            <textarea
-              id="modal-form-comment"
-              type="text"
-              name="modal-form-comment"
-              placeholder="Wprowadź tekst"
-              rows="8"
-            ></textarea>
-          </div>
+            </div>
+            <div class="modal-forms-display">
+              <label for="modal-form-comment">Komentarz</label>
+              <textarea
+                id="modal-form-comment"
+                type="text"
+                name="modal-form-comment"
+                placeholder="Wprowadź tekst"
+                rows="8"
+              ></textarea>
+            </div>
+            <div class="regulation-agree-form">
+              <input
+                id="regulation&politics-confirmation"
+                name="regulation&politics-confirmation"
+                type="checkbox"
+                class="checbox"
+                required
+              />
+              <svg class="checkbox-blue" width="16px" height="15px">
+                <use
+                  href="./images/SVG/modal-box-checkbox.svg#icon-checkbox-blue"
+                ></use>
+              </svg>
+              <svg class="checkbox-empty" width="16px" height="15px">
+                <use
+                  href="./images/SVG/modal-box-checkbox.svg#icon-checkbox-empty"
+                ></use>
+              </svg>
+              <label for="regulation&politics-confirmation">
+                Oświadczam iż akceptuję
+                <a href="https://www.google.pl/" target="_blank">Regulamin</a> i
+                <a href="https://www.google.pl/" target="_blank"
+                  >Politykę Prywatności</a
+                >.
+              </label>
+            </div>
+            <button class="send-form-button" type="submit">Wyślij</button>
+          </form>
         </div>
-        <div class="regulation-agree-form">
-          <input
-            id="regulation&politics-confirmation"
-            name="regulation&politics-confirmation"
-            type="checkbox"
-            class="checbox"
-          />
-          <svg class="checkbox-blue" width="16px" height="15px">
-            <use
-              href="./images/SVG/modal-box-checkbox.svg#icon-checkbox-blue"
-            ></use>
-          </svg>
-          <svg class="checkbox-empty" width="16px" height="15px">
-            <use
-              href="./images/SVG/modal-box-checkbox.svg#icon-checkbox-empty"
-            ></use>
-          </svg>
-          <label for="regulation&politics-confirmation">
-            Oświadczam iż akceptuję
-            <a href="https://www.google.pl/" target="_blank">Regulamin</a> i
-            <a href="https://www.google.pl/" target="_blank"
-              >Politykę Prywatności</a
-            >.
-          </label>
-        </div>
-        <button class="send-form-button" type="submit">Zapisz się</button>
       </div>
     </div>
     <!-- MODAL-BOX-END -->
@@ -722,21 +726,22 @@
             </li>
           </ul>
         </div>
+        <!-- newsletter form begin -->
         <div class="newsletter-form">
+          <!-- kontener na newsletter begon -->
           <label for="newsletter-email">zapisz się do newslettera</label>
-          <div class="newsletter-subscribe">
-            <form
-              class="newsletter-form-input"
-              name="newsletter-form"
-              autocomplete="on"
-            >
-              <input
-                id="newsletter-email"
-                type="email"
-                name="email"
-                placeholder="E-mail"
-              />
-            </form>
+          <form
+            class="newsletter-subscribe newsletter-form-input"
+            name="newsletter-form"
+            autocomplete="on"
+          >
+            <input
+              id="newsletter-email"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              required
+            />
             <div class="newsletter-button-style">
               <button type="submit">Zapisz się</button>
               <svg width="24px" height="24px">
@@ -745,7 +750,7 @@
                 ></use>
               </svg>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </footer>

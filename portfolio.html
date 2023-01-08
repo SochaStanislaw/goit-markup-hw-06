@@ -424,21 +424,22 @@
             </li>
           </ul>
         </div>
+        <!-- newsletter form begin -->
         <div class="newsletter-form">
+          <!-- kontener na newsletter begon -->
           <label for="newsletter-email">zapisz się do newslettera</label>
-          <div class="newsletter-subscribe">
-            <form
-              class="newsletter-form-input"
-              name="newsletter-form"
-              autocomplete="on"
-            >
-              <input
-                id="newsletter-email"
-                type="email"
-                name="email"
-                placeholder="E-mail"
-              />
-            </form>
+          <form
+            class="newsletter-subscribe newsletter-form-input"
+            name="newsletter-form"
+            autocomplete="on"
+          >
+            <input
+              id="newsletter-email"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              required
+            />
             <div class="newsletter-button-style">
               <button type="submit">Zapisz się</button>
               <svg width="24px" height="24px">
@@ -447,7 +448,7 @@
                 ></use>
               </svg>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
